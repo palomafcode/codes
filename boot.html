@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <title>Yas- CHATGPT</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Nk1P/Lh2u4+T/Fl1n3FvY1N/YmCcpA/p86sGdKaGXRsEOXiZT9zqyEY4p71LEKIzbiJ0dcQPlSt5bJph0qnvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Yas - CHATGPT</title>
 </head>
 <body>
   <div class="box-questions">
     <div class="header">
-      <p><img class="round-image" src="img/yasazul.png" alt="">Yas - IA (GPT) da Globo Leilões</p>
+      <div class="header-content">
+        <img class="round-image" src="/yasazul.png" alt="">
+        <h1>Yas - IA (GPT) da Globo Leilões</h1>
+      </div>
     </div>
+   
     <p id="status"></p>
     <div id="history">
       <!-- Aqui vai o chat gerado conforme as respostas -->
     </div>
+
+
+
     <div class="footer">
       <input type="text" id="message-input" placeholder="Como posso ajudar?...">
-      <button class="btn-submit" id="btn-submit" onclick="sendMessage()">Enviar</button>
+      <button class="btn-submit" id="btn-submit" onclick="sendMessage()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
+        <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+      </svg></button>
     </div>
   </div>
   <script src="boot.js"></script>

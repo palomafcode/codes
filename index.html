@@ -1,0 +1,51 @@
+function showNoAnswerOptions(question) {
+    var historyBox = document.getElementById('history');
+    var table = document.createElement('table');
+    table.className = 'response-table';
+    
+    var row1 = document.createElement('tr');
+    var cell1 = document.createElement('td');
+    cell1.colSpan = 3;
+    cell1.innerHTML = 'Desculpe, não encontrei a resposta. O que você deseja fazer agora?';
+    row1.appendChild(cell1);
+    table.appendChild(row1);
+
+    var row2 = document.createElement('tr');
+    var cell2_1 = document.createElement('td');
+    cell2_1.className = 'option-cell';
+    var btnMaisOpcoes = document.createElement('button');
+    btnMaisOpcoes.className = 'btn-option';
+    btnMaisOpcoes.innerHTML = 'Mais Opções';
+    btnMaisOpcoes.addEventListener('click', () => {
+        showOptions();
+    });
+    cell2_1.appendChild(btnMaisOpcoes);
+    row2.appendChild(cell2_1);
+
+    var cell2_2 = document.createElement('td');
+    cell2_2.className = 'option-cell';
+    var btnChatGPT = document.createElement('button');
+    btnChatGPT.className = 'btn-option';
+    btnChatGPT.innerHTML = 'Falar com o Chat GPT';
+    btnChatGPT.addEventListener('click', () => {
+        redirectToChatGPTPage();
+    });
+    cell2_2.appendChild(btnChatGPT);
+    row2.appendChild(cell2_2);
+
+    var cell2_3 = document.createElement('td');
+    cell2_3.className = 'option-cell';
+    var btnAtendente = document.createElement('button');
+    btnAtendente.className = 'btn-option';
+    btnAtendente.innerHTML = 'Falar com um Atendente';
+    btnAtendente.addEventListener('click', () => {
+        openWhatsApp();
+    });
+    cell2_3.appendChild(btnAtendente);
+    row2.appendChild(cell2_3);
+
+    table.appendChild(row2);
+
+    historyBox.appendChild(table);
+    historyBox.scrollTop = historyBox.scrollHeight;
+}

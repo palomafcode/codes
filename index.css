@@ -1,11 +1,45 @@
 :root{
     --dark: #0c0c0c;
     --white: #fff;
-    --purple:  #08bae7 ;
+    --purple:  #2939c5 ;
     --gray: #949494;
-    --gray2: #cccccc;
+    --gray2: #46aef7;
   }
+h1{
+  font-size: 18px;
+  margin: 4px;
+  margin-left: 13px;
+}
+.assistent-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.response-table {
+  border-collapse: separate;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border: 2px solid gray;
+
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+  border-bottom-left-radius: 0;
   
+
+}
+
+.option-cell {
+  padding: 8px;
+  text-align: center;
+}
+.usuario-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
   body{
     background-color: var(--dark);
     font-family: Arial, Helvetica, sans-serif;
@@ -14,7 +48,66 @@
     justify-content: center;
     height: 100vh;
   }
+
+  /* Estilo para os botões de opção */
+
+
+button{
+ text-align: center;
+  margin: 4px;
+
+}
+
+.btn-submit{
+  background: linear-gradient(#1dd5e6 45%, #46aef7);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Define o raio para 50% (metade do valor da largura/altura) */
+
+  color: white; /* Cor do texto do botão */
+  font-size: 16px; /* Tamanho da fonte do texto */
+  border: none; /* Remove a borda do botão */
+  cursor: pointer; /* Altera o cursor para o ícone de mão quando passar o mouse */
   
+}
+  .btn-option {
+    background-color: transparent;
+display: block;
+    text-align: center;
+    color:  #2939c5;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-option2 {
+  background: linear-gradient(#1dd5e6 45%, #46aef7);
+display: block;
+  text-align: center;
+  width: 10rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-option3 {
+  background: linear-gradient(#1dd5e6 45%, #46aef7);
+display: block;
+width: 10rem;
+height: 3rem;
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.option-buttons-container button{
+  margin-bottom: 5px;
+}
+
+
+
   .box-questions{
     margin-top: 3rem;
     background-color: var(--white);
@@ -27,7 +120,7 @@
     border-radius: 10px;
     text-align: center;
   }
-  
+
   .header{
     background-color: var(--purple);
     color: var(--white);
@@ -36,29 +129,32 @@
   }
   
   .footer{
-    background-color: var(--purple);
+    background-color:transparent;
     border-radius: 0 0 10px 10px;
     padding: 1rem;
-  }
+    border: 2px solid  #2939c5 ;
   
+  
+  }
+
+
+
   input{
     width: 50%;
     border: none;
     outline: none;
+    background-color: #fff;
+    border: 2px solid #fff;
     padding: 10px;
     border-radius: 5px;
     font-size: 1rem;
   }
-  
-  button{
-    border: none;
-    border-radius: 5px;
-    background-color: #0754fb;
-    padding: 10px;
-    color: #fff;
-    font-size: 1rem;
+ 
+  td{
+    color:#2939c5;
+    font-size: 16px;
+    font-weight: 700;
   }
-  
   button:hover{
     cursor: pointer;
     transition: .4s;
@@ -71,13 +167,11 @@
   
   .round-image {
     width: 80px; /* Defina o tamanho desejado para a imagem */
-    
-   
   height: 80px;
+  margin-top: 9px;
+  align-items: flex-start;
     border-radius: 50%; /* Torna a imagem redonda */
- margin-left: 3rem;
-   
-  margin-right: 4px; /* Espaçamento entre a imagem e o texto */
+
   }
   #history{
     padding: 1rem;
@@ -93,11 +187,11 @@
     justify-content: flex-end;
   }
   
-  .box-response-message{
+  /* .box-response-message{
     display: flex;
     justify-content: flex-start;
   }
-  
+   */
   .my-message,
   .response-message{
     padding: 1rem;
@@ -105,13 +199,29 @@
     color: white;
     margin: 0;
   }
-  
-  .my-message{
-    text-align: right;
-    background-color: rgb(0, 89, 255);
+  .question{
+    color: #fff;
+    font-weight: 700;
   }
-  
+
+  .message{
+    text-align: left;
+    background-color: #2939c5 ;
+    padding: 1rem;
+    width: 12rem;
+    border-radius: 10px;
+    color: white;
+    margin: 0;
+
+    justify-content: flex-start;
+  }
+
   .response-message{
     text-align: left;
+    width: 13rem;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border-bottom-left-radius: 0;
     background-color: rgb(84, 198, 243);
   }
