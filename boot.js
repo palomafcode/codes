@@ -1,5 +1,11 @@
 const apiKey = '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';
+function initiateGPTChat() {
+    // Mensagem inicial que você deseja exibir
+    var initialMessage = 'Olá! Como posso ajudar?';
 
+    // Adicione a mensagem inicial utilizando a função appendMessage
+    appendMessage('Yas:', initialMessage);
+}
 function sendMessage() {
     var message = document.getElementById('message-input');
     if (!message.value) {
@@ -32,10 +38,11 @@ function sendMessage() {
 }
 function getAnswer(question) {
     const predefinedAnswers = {
+        '': 'Olá meu Nome é Yas , como posso ajudar?.',
         'qual é o seu nome?': 'Meu nome é Yas.',
         'é possível visitar os imóveis?': 'Na maioria dos casos, não é possível a visitação ao imóvel. Uma vez que o imóvel leiloado está ocupado. Mas pode haver exceções, nesses casos o edital informará.',
         'qual a forma de pagamento do lance?': 'Leilões Judiciais: Pagamentos à vista por meio de Guia Judicial emitida com os dados do processo. Leilões extrajudiciais: Pagamento à vista na conta bancária do credor fiduciário ou proprietário do imóvel.',
-        // Adicione mais perguntas e respostas definidas aqui
+       
     };
     const lowercaseQuestion = question.toLowerCase();
     return predefinedAnswers[lowercaseQuestion];
@@ -43,10 +50,10 @@ function getAnswer(question) {
 function showNoAnswerOptions(question) {
     var historyBox = document.getElementById('history');
     var boxMessage = document.createElement('div');
-    boxMessage.className = 'box-response-message';
+    boxMessage.className = 'response-message';
     var textMessage = document.createElement('p');
     textMessage.className = 'message';
-    textMessage.innerHTML = 'Desculpe, não encontrei a resposta. O que você deseja fazer agora?';
+    textMessage.innerHTML = 'Desculpe, não entendi sua pergunta.Por aqui eu consigo te ajudar com as seguintes opções:';
     var btnPagamentos = document.createElement('button');
     btnPagamentos.className = 'btn-option';
     btnPagamentos.innerHTML = 'Falar sobre Pagamentos';
@@ -172,7 +179,7 @@ function showAnswer(option) {
     };
     var historyBox = document.getElementById('history');
     var boxMessage = document.createElement('div');
-    boxMessage.className = 'box-response-message';
+    boxMessage.className = 'response-message';
     var textMessage = document.createElement('p');
     textMessage.className = 'message';
     textMessage.innerHTML = predefinedAnswers[option];
@@ -196,10 +203,9 @@ function appendMessage(sender, message) {
     var historyBox = document.getElementById('history');
     var boxMessage = document.createElement('div');
         
-    // Adicione uma classe específica para as mensagens de resposta
+
     boxMessage.className = sender === 'Você:' ? 'box-my-message' : 'box-response-message';
-    
-    // Cria a foto da assistente virtual (resposta)
+ 
     if (sender !== 'Você:') {
       var assistantImage = document.createElement('img');
       assistantImage.src = 'yasazul.png';
@@ -208,7 +214,7 @@ function appendMessage(sender, message) {
     }
     
     var textMessage = document.createElement('p');
-    textMessage.className = 'message';
+    textMessage.className = 'my-message';
     textMessage.innerHTML = message;
   
 
