@@ -1,36 +1,16 @@
-function showNoAnswerOptions(question) {
-    var historyBox = document.getElementById('history');
-    var table = document.createElement('table');
-    table.className = 'response-table';
-    
-    var row1 = document.createElement('tr');
-    var cell1 = document.createElement('td');
-    cell1.colSpan = 3;
-    cell1.innerHTML = 'Desculpe, não encontrei a resposta. O que você deseja fazer agora?';
-    row1.appendChild(cell1);
-    table.appendChild(row1);
-
-    var row2 = document.createElement('tr');
-    var cell2_1 = document.createElement('td');
-    cell2_1.className = 'option-cell';
-    var btnPagamentos = createButton('Falar sobre Pagamentos', 'showAnswer', 'pagamentos');
-    cell2_1.appendChild(btnPagamentos);
-    row2.appendChild(cell2_1);
-
-    var cell2_2 = document.createElement('td');
-    cell2_2.className = 'option-cell';
-    var btnJuridico = createButton('Departamento Jurídico', 'showAnswer', 'jurídico');
-    cell2_2.appendChild(btnJuridico);
-    row2.appendChild(cell2_2);
-
-    var cell2_3 = document.createElement('td');
-    cell2_3.className = 'option-cell';
-    var btnOutrasOpcoes = createButton('Outras Opções', 'showAnswer', 'outrasopcoes');
-    cell2_3.appendChild(btnOutrasOpcoes);
-    row2.appendChild(cell2_3);
-
-    table.appendChild(row2);
-    historyBox.appendChild(table);
-    historyBox.scrollTop = historyBox.scrollHeight;
-}
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <!-- Adicione o seu CSS aqui -->
+</head>
+<body>
+    <div id="history">
+        <!-- Aqui será exibido o histórico da conversa -->
+    </div>
+    <form method="post" action="robo.blade.php">
+        <input type="text" name="message" id="message-input" placeholder="Digite sua mensagem..." />
+        <button type="submit" id="btn-submit">Enviar</button>
+    </form>
+</body>
+</html>

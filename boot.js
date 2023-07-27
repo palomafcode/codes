@@ -1,7 +1,7 @@
 const apiKey = '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';
 function initiateGPTChat() {
     // Mensagem inicial que você deseja exibir
-    var initialMessage = 'Olá! Como posso ajudar?';
+    var initialMessage = 'Olá !Como posso ajudar?';
 
     // Adicione a mensagem inicial utilizando a função appendMessage
     appendMessage('Yas:', initialMessage);
@@ -9,7 +9,7 @@ function initiateGPTChat() {
 function sendMessage() {
     var message = document.getElementById('message-input');
     if (!message.value) {
-        message.style.border = '1px solid red';
+        message.style.border = '1px solid blue';
         return;
     }
     message.style.border = 'none';
@@ -53,24 +53,24 @@ function showNoAnswerOptions(question) {
     boxMessage.className = 'response-message';
     var textMessage = document.createElement('p');
     textMessage.className = 'message';
-    textMessage.innerHTML = 'Desculpe, não entendi sua pergunta.Por aqui eu consigo te ajudar com as seguintes opções:';
+    textMessage.innerHTML = 'Desculpe, não entendi sua pergunta.<br>Por aqui eu consigo te ajudar com alguns assuntos selecione uma opção para prosseguirmos ⬇️';
     var btnPagamentos = document.createElement('button');
     btnPagamentos.className = 'btn-option';
-    btnPagamentos.innerHTML = 'Falar sobre Pagamentos';
+    btnPagamentos.innerHTML = '▫ Forma de Pagamento';
     btnPagamentos.addEventListener('click', () => {
         showAnswer('pagamentos');
     });
 
     var btnJuridico = document.createElement('button');
     btnJuridico.className = 'btn-option';
-    btnJuridico.innerHTML = 'Departamento Jurídico';
+    btnJuridico.innerHTML = '▫ Assuntos Jurídicos';
     btnJuridico.addEventListener('click', () => {
         showAnswer('jurídico');
     });
 
     var btnOutrasopcoes = document.createElement('button');
     btnOutrasopcoes.className = 'btn-option';
-    btnOutrasopcoes.innerHTML = 'Outras Opções';
+    btnOutrasopcoes.innerHTML = '▫ Outras Opções';
     btnOutrasopcoes.addEventListener('click', () => {
         showAnswer('outrasopcoes');
    
@@ -96,14 +96,14 @@ historyBox.appendChild(btnAtendente);
 
     var btnComercial = document.createElement('button');
     btnComercial.className = 'btn-option';
-    btnComercial.innerHTML = 'Departamento Comercial';
+    btnComercial.innerHTML = '▫  Comercial';
     btnComercial.addEventListener('click', () => {
         showAnswer('comercial');
     });
 
     var btnLeiloes = document.createElement('button');
     btnLeiloes.className = 'btn-option';
-    btnLeiloes.innerHTML = 'Dúvidas sobre os Leilões';
+    btnLeiloes.innerHTML = '▫ Dúvidas sobre os Leilões';
     btnLeiloes.addEventListener('click', () => {
         showAnswer('leilões');
     });
@@ -155,7 +155,7 @@ function showOptions() {
     var cell2_3 = document.createElement('td');
     cell2_3.className = 'option-cell';
     var btnAtendente = document.createElement('button');
-    btnAtendente.className = 'btn-option';
+    btnAtendente.className = 'btn-option2';
     btnAtendente.innerHTML = 'Falar com um Atendente';
     btnAtendente.addEventListener('click', () => {
         openWhatsApp();
@@ -175,7 +175,7 @@ function showAnswer(option) {
         'jurídico': '<span class="question">Como dar baixa nas averbações da matrícula<br></span><br>Leilão Judicial: Caso haja outra averbação de penhora na matrícula do imóvel além daquela efetuada nos autos do processo judicial em que se realizou o leilão, após a expedição da Carta de Arrematação, o arrematante deverá solicitar a expedição de ofício ao Cartório de Registro de Imóveis competente para que seja efetuada a baixa da penhora constante na matrícula do imóvel. Na maioria dos casos o Juiz já determina que essa informação conste na própria Carta de Arrematação <br><br>Leilão Extrajudicial de Alienação Fiduciária: Caso haja averbação de penhora na matrícula do imóvel, anterior a consolidação da propriedade em favor do credor, o arrematante deverá peticionar nesses processos requerendo o cancelamento da penhora, uma vez comprovando com cópia da matrícula do imóvel, a arrematação do bem.</span>',
         'comercial': 'Resposta sobre comercial.',
         'leilões': '<span class="question">	Como Participar?<br></span>Para participar dos nossos leilões, é necessário realizar um cadastro e enviar documentos (identificação com foto e comprovante de endereço) em nosso site, após o cadastro analisado e aprovado, encaminharemos a Declaração de Participação para assinatura digital, via sistema ClickSign, concluída essa etapa seu cadastro estará liberado para habilitar-se e ofertar lance no imóvel de seu interesse.<br><br><span class="question">Sobre o estado de conservação do imóvel:</span><br>O bem será vendido no estado de conservação em que se encontra, sem garantia, cabendo ao interessado verificar suas condições, antes de ofertar o lance (Art. 18 da Resolução n° 236/2016).',
-        'outrasopcoes': 'Certo, para verificar quais os leilões disponíveis, editais e demais dúvidas acesse nossa página ou então retorne em uma das opções anteriores. Se deseja continuar por aqui selecione uma das opções:	',  
+        'outrasopcoes': '💭Certo, para verificar quais os leilões disponíveis, editais e demais dúvidas acesse nossa página ➡️https://globoleiloes.com.br ou então retorne em uma das opções anteriores. Se deseja continuar por aqui selecione uma das opções:	',  
     };
     var historyBox = document.getElementById('history');
     var boxMessage = document.createElement('div');
@@ -208,7 +208,7 @@ function appendMessage(sender, message) {
  
     if (sender !== 'Você:') {
       var assistantImage = document.createElement('img');
-      assistantImage.src = 'yasazul.png';
+      assistantImage.src = 'yas-fundo-branco.png';
       assistantImage.className = 'assistent-image';
       boxMessage.appendChild(assistantImage);
     }

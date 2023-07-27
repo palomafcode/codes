@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu:wght@700&display=swap');
 :root{
     --dark: #0c0c0c;
     --white: #fff;
@@ -13,34 +14,12 @@ h1{
 .assistent-image{
   width: 50px;
   height: 50px;
+  border: 2px solid   #34bfef ;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-.response-table {
-  border-collapse: separate;
-  width: 100%;
-  margin-bottom: 1rem;
-  background-color: #fff;
-  border: 2px solid gray;
 
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;
-  border-bottom-left-radius: 0;
-  
-
-}
-
-.option-cell {
-  padding: 8px;
-  text-align: center;
-}
-.usuario-image{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
   body{
     background-color: var(--dark);
     font-family: Arial, Helvetica, sans-serif;
@@ -50,43 +29,37 @@ h1{
     height: 100vh;
   }
 
-  /* Estilo para os botões de opção */
-
-
-button{
- text-align: center;
-  margin: 4px;
-
-}
 
 .btn-submit{
   background: linear-gradient(#1dd5e6 45%, #46aef7);
   width: 50px;
   height: 50px;
-  border-radius: 50%; /* Define o raio para 50% (metade do valor da largura/altura) */
-
-  color: white; /* Cor do texto do botão */
-  font-size: 16px; /* Tamanho da fonte do texto */
-  border: none; /* Remove a borda do botão */
-  cursor: pointer; /* Altera o cursor para o ícone de mão quando passar o mouse */
+  border-radius: 50%; 
+  color: white; 
+  font-size: 16px; 
+  border: none; 
+  cursor: pointer; 
   
 }
   .btn-option {
     background-color: transparent;
 display: block;
+font-family: 'Poppins', sans-serif;
     text-align: center;
+font-weight: 600;
     color: #575658;
 font-size: 17px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-.btn-option2 {
+.btn-option2{
   background: #34bfef;
 display: block;
   text-align: center;
   width: 10rem;
-  color: #5f5454;
+  height: 13rem;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -95,20 +68,13 @@ display: block;
   background: #34bfef;
 display: block;
 width: 10rem;
-height: 3rem;
+height: 5rem;
   text-align: center;
-  color: #a51f1f;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-
-.option-buttons-container button{
-  margin-bottom: 5px;
-}
-
-
-
   .box-questions{
     margin-top: 3rem;
     background-color: var(--white);
@@ -125,6 +91,7 @@ height: 3rem;
   .header{
     background: #34bfef;
     color: var(--white);
+    font-family: 'Poppins', sans-serif;
     border-radius: 10px 10px 0 0;
     font-size: 1.4rem;
   }
@@ -134,15 +101,11 @@ height: 3rem;
     border-radius: 0 0 10px 10px;
     padding: 1rem;
     border: 2px solid   #34bfef ;
-  
-  
   }
-
-
-
   input{
     width: 50%;
     border: none;
+    font-family: 'Poppins', sans-serif;
     outline: none;
     background-color: #fff;
     border: 2px solid #fff;
@@ -150,13 +113,7 @@ height: 3rem;
     border-radius: 5px;
     font-size: 1rem;
   }
- 
-  td{
-    color: #333235;
-    width: 15rem;
-    font-size: 16px;
-    font-weight: 700;
-  }
+
   button:hover{
     cursor: pointer;
     transition: .4s;
@@ -168,31 +125,25 @@ height: 3rem;
   }
   
   .round-image {
-    width: 80px; /* Defina o tamanho desejado para a imagem */
+    width: 80px;
   height: 80px;
   margin-top: 9px;
   margin-left: -10rem;
   align-items: flex-start;
-    border-radius: 50%; /* Torna a imagem redonda */
+    border-radius: 50%; 
 
   }
   #history{
     padding: 1rem;
     overflow: auto;
     display: flex;
+    font-family: 'Poppins', sans-serif;
     flex-direction: column;
     gap: 1rem;
     height: 100%;
   }
-  
 
-  /* .box-response-message{
-    display: flex;
-    justify-content: flex-start;
-  }
-   */
 
-  
   .question{
     color: #635d5d;
     font-weight: 700;
@@ -202,7 +153,7 @@ height: 3rem;
   .response-message{
     text-align: left;
     width: 13rem;
-    
+    font-family: 'Poppins', sans-serif;
     color: #5f0979;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -232,6 +183,7 @@ height: 3rem;
   .my-message{
     text-align: right;
     background: #34bfef;
+    font-family: 'Poppins', sans-serif;
     border-top-left-radius: 30px;
     border-top-right-radius:23px;
     border-bottom-right-radius: 23px;
@@ -240,6 +192,7 @@ height: 3rem;
   
   .response-message{
     text-align: left;
+    font-family: 'Poppins', sans-serif;
     color: #504c4c;
     font-size: 18px;
     width: 23rem;
